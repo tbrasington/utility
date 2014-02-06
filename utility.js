@@ -1,3 +1,8 @@
+/*
+	Author: Thomas Brasington
+	What: To help me do things shorthand
+*/
+
 var utility = {
 	
 	that : this,
@@ -34,14 +39,15 @@ var utility = {
 	},
 	
 	device : function(){
-		if(ua.match(/mobile/) || ua.match(/android/) || ua.match(/iPhone/)|| ua.match(/iPod/))
-		{
+	
+		if(ua.match(/mobile/) || ua.match(/android/) || ua.match(/iPhone/)|| ua.match(/iPod/)) {
 			string={kind:'mobile', interface:'touch'};
 		} 
-		if( ua.match(/ipad/) || ua.match(/tablet/))
-		{
+		
+		if( ua.match(/ipad/) || ua.match(/tablet/)) {
 			string={kind:'tablet', interface:'touch'}; 
 		}
+		
 		return string;
 	},
 	 
@@ -83,8 +89,6 @@ var utility = {
 						
 						response = JSON.parse(this.response);
 					}
-					 
-					//if(parameters.callback!==null) { parameters.callback(response, this.status); }
 				}
 				
 				if(parameters.callback!==null) { parameters.callback(response, this.status); }
